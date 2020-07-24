@@ -15,8 +15,9 @@ function timer(){
 var whackMole = document.getElementById("whack-a-mole")
 whackMole.addEventListener("click", function(event) {
   if(event.target.matches(".mole")){
-    console.log(true)
     score++
+    event.target.classList.remove("mole")
+    scoreDisplay.innerText=score
+    console.log(score)
   }
 })
-console.log(score)
